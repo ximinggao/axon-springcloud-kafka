@@ -4,3 +4,35 @@ server:
 spring:
   application:
     name: query
+  datasource:
+    platform: postgresql
+    url: jdbc:postgresql://localhost:5432/book-query
+    username: postgres
+    password: password
+
+  jpa:
+    hibernate:
+      ddl-auto: update
+
+axon:
+  serializer:
+    events: jackson
+    messages: jackson
+  kafka:
+    consumer:
+      group-id: book-consumer
+      client-id: book-query
+      auto-offset-reset: earliest
+    default-topic: library
+  distributed:
+    enabled: true
+  eventhandling:
+    processors:
+      Books:
+        source: kafkaMessageSource
+        mode: TRACKING
+
+logging:
+  level:
+    com.example.book: debug
+    org.axonframework: debug

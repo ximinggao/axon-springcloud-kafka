@@ -19,7 +19,7 @@ axon:
     producer:
       client-id: book-command
       transaction-id-prefix: clxtrx
-    default-topic: book
+    default-topic: library
   distributed:
     enabled: true
 

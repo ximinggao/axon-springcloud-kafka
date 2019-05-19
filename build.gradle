@@ -1,4 +1,4 @@
 subprojects {
-    group = 'com.example'
+    group = 'com.example.book'
     version = '0.0.1-SNAPSHOT'
 }

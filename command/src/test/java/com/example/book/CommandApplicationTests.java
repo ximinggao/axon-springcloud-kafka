@@ -1,4 +1,4 @@
-package com.example.command;
+package com.example.book;
 
 import org.junit.Test;
 import org.junit.runner.RunWith;

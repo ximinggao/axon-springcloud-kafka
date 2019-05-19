@@ -1,3 +1,29 @@
 spring:
   application:
     name: command
+  datasource:
+    platform: postgresql
+    url: jdbc:postgresql://localhost:5432/book-command
+    username: postgres
+    password: password
+
+  jpa:
+    hibernate:
+      ddl-auto: update
+
+axon:
+  serializer:
+    messages: jackson
+    events: jackson
+  kafka:
+    producer:
+      client-id: book-command
+      transaction-id-prefix: clxtrx
+    default-topic: book
+  distributed:
+    enabled: true
+
+logging:
+  level:
+    com.example.book: debug
+    org.axonframework: debug

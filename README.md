@@ -1,2 +1,4 @@
-# axon-eventsourcing-with-kafka
-A project to implement using Kafka as event store to support event-sourcing with Axon Framework.
+# axon-springcloud-kafka
+Demo Event-Sourcing project using Axon Framework.
+
+Use JPA as event storage engine, and Kafka to distribute events.
